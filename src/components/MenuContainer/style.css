@@ -1,0 +1,51 @@
+html,
+body,
+div,
+p,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.cardapioCorpo {
+  width: 90vw;
+  margin: 20px;
+}
+
+.cardapio {
+  list-style: none;
+  width: 90vw;
+  height: 361px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.carrinho {
+  width: 90vw;
+  height: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .cardapioCorpo {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 50px 50px 50px;
+  }
+
+  .cardapio {
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex: 2;
+    height: auto;
+  }
+  .carrinho {
+    flex: 1;
+  }
+}

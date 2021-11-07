@@ -1,0 +1,88 @@
+.cardapioTopo {
+  width: 100vw;
+  height: 139px;
+  background: #f5f5f5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo ==> */
+.cardapioTopo__title {
+  width: 80vw;
+  text-align: center;
+  color: #eb5757;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  padding: 20px;
+}
+.cardapioTopo__title span {
+  color: #333333;
+  font-size: 22px;
+}
+/* <== Logo */
+
+/* Barra de Pesquisa ==> */
+.cardapioTopo__barraPesquisa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0 15px;
+
+  width: 80vw;
+  height: 60px;
+
+  background: #ffffff;
+
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.cardapioTopo__barraPesquisa input {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+}
+
+.cardapioTopo__barraPesquisa input:hover {
+  border-bottom: 2px solid #0000ff;
+}
+
+.cardapioTopo__barraPesquisa button {
+  width: 107px;
+  height: 40px;
+
+  background: #27ae60;
+  color: #ffffff;
+
+  border: 2px solid #27ae60;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media screen and (min-width: 800px) {
+  .cardapioTopo {
+    flex-direction: row;
+  }
+  .cardapioTopo__title {
+    width: 160px;
+    margin-left: 50px;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .cardapioTopo__barraPesquisa {
+    width: 365px;
+    margin-right: 50px;
+  }
+}
