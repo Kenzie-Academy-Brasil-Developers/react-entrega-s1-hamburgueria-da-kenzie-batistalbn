@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Cart = ({ currentSale, cartTotal, setCurrentSale }) => {
+const Cart = ({ currentSale, cartTotal, setCurrentSale, setCartTotal }) => {
   return (
     <div>
       <div className="carrinho__title">
@@ -15,11 +15,13 @@ const Cart = ({ currentSale, cartTotal, setCurrentSale }) => {
         <div>
           <div className="carriho__produtos">
             {currentSale.map((item) => (
-              <div className="carrinho__cardProduto">
+              <div key={item.id} className="carrinho__cardProduto">
                 <img src={item.img} alt={item.name} />
                 <div className="carrinho__cardText">
                   <div className="carrinho__cardName">
-                    <p className="carrinho__nome">{item.name}</p>
+                    <p className="carrinho__nome">
+                      {item.name} x{item.quant}
+                    </p>
                     <p className="carrinho__remover">Remover</p>
                   </div>
                   <p className="carrinho__categoria">{item.category}</p>

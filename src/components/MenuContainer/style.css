@@ -36,16 +36,16 @@ li {
   .cardapioCorpo {
     display: flex;
     flex-direction: row;
-    margin: 0px 50px 50px 50px;
+    margin: 0px 0px 50px 50px;
   }
 
   .cardapio {
     overflow: hidden;
     flex-wrap: wrap;
-    flex: 2;
     height: auto;
   }
   .carrinho {
-    flex: 1;
+    min-width: 400px;
+    width: 400px;
   }
 }

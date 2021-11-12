@@ -9,7 +9,7 @@ const MenuContainer = ({
   currentSale,
   setCurrentSale,
   cartTotal,
-  filteredProducts,
+  setCartTotal,
 }) => {
   return (
     <div className="cardapioCorpo">
@@ -23,6 +23,7 @@ const MenuContainer = ({
         <Cart
           currentSale={currentSale}
           cartTotal={cartTotal}
+          setCartTotal={setCartTotal}
           setCurrentSale={setCurrentSale}
         />
       </div>

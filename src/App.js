@@ -12,6 +12,7 @@ function App() {
       category: "Sanduíches",
       price: 14.0,
       img: "https://i.ibb.co/fpVHnZL/hamburguer.png",
+      quant: 0,
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ function App() {
       category: "Sanduíches",
       price: 16.0,
       img: "https://i.ibb.co/djbw6LV/x-burgue.png",
+      quant: 0,
     },
     {
       id: 3,
@@ -26,6 +28,7 @@ function App() {
       category: "Sanduíches",
       price: 18.0,
       img: "https://i.ibb.co/FYBKCwn/big-kenzie.png",
+      quant: 0,
     },
     {
       id: 4,
@@ -33,6 +36,7 @@ function App() {
       category: "Bebidas",
       price: 5.0,
       img: "https://i.ibb.co/cCjqmPM/fanta-guarana.png",
+      quant: 0,
     },
     {
       id: 5,
@@ -40,6 +44,7 @@ function App() {
       category: "Bebidas",
       price: 4.99,
       img: "https://i.ibb.co/fxCGP7k/coca-cola.png",
+      quant: 0,
     },
     {
       id: 6,
@@ -47,6 +52,7 @@ function App() {
       category: "Bebidas",
       price: 4.99,
       img: "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+      quant: 0,
     },
   ]);
 
@@ -56,11 +62,18 @@ function App() {
 
   const showProducts = () => {
     setProducts(products.filter((item) => item.name === filteredProducts));
+    setFilteredProducts([]);
   };
 
   const handleClick = (productId) => {
     const idProduct = products.find((item) => item.id === productId);
-    setCurrentSale([...currentSale, idProduct]);
+    if (idProduct.quant === 0) {
+      setCurrentSale([...currentSale, idProduct]);
+      idProduct.quant = idProduct.quant + 1;
+    } else {
+      idProduct.quant = idProduct.quant + 1;
+    }
+
     setCartTotal([...cartTotal, idProduct]);
   };
 
@@ -78,6 +91,7 @@ function App() {
         setCurrentSale={setCurrentSale}
         handleClick={handleClick}
         cartTotal={cartTotal}
+        setCartTotal={setCartTotal}
       />
     </div>
   );
